@@ -13,7 +13,6 @@ import javax.swing.*;
 
 /**
  * @see "https://stackoverflow.com/a/11372932/230513"
- * @see "https://stackoverflow.com/a/3588523/230513"
  */
 public class GUITest extends JApplet {
 
