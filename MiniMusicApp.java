@@ -1,5 +1,3 @@
-import com.sun.media.sound.SoftShortMessage;
-
 import javax.sound.midi.*;
 
 import static java.lang.Thread.sleep;
