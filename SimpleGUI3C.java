@@ -1,3 +1,5 @@
+import com.sun.prism.paint.Gradient;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -42,10 +44,23 @@ class My3CDrawPanel extends JPanel
         int red = (int) (Math.random() * 255);
         int green = (int) (Math.random() * 255);
         int blue = (int) (Math.random() * 255);
+        Color startColor = new Color(red,green,blue);
 
-        Color randomColor = new Color(red,green,blue);
-        g.setColor(randomColor);
-        g.fillOval(70,70,(int)this.getWidth()/2, (int) this.getHeight()/2);
+        red = (int) (Math.random() * 255);
+        green = (int) (Math.random() * 255);
+        blue = (int) (Math.random() * 255);
+        Color endColor = new Color(red,green,blue);
+
+        GradientPaint gradient =
+                new GradientPaint(70,70,startColor,
+                        (int)this.getWidth()/2.25f,(int) this.getHeight()/2.25f,
+                        endColor);
+
+        Graphics2D g2d = (Graphics2D) g;
+
+        g2d.setPaint(gradient);
+        g2d.fillOval(70,70,
+                (int)this.getWidth()/2, (int) this.getHeight()/2);
 
     }
 }
